@@ -1,5 +1,6 @@
 # Changelog
 
+* Added a handy `tmux-sessionizer` function
 * Added `tmux` config
 * Seggregated environment variables in `.zshenv` file that is loaded before `.zshrc`
 * Initialized `zoxide` and `zsh-autocomplete`

@@ -6,7 +6,7 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 alias ls="ls -Alhp --color=auto"
 
 # Function to recursively remove .DS_Store files
-rmdsstore() {
+function rmdsstore() {
     # Get the absolute path of the directory being passed or current directory
     local target_dir="${@:-.}"
   
@@ -19,9 +19,21 @@ rmdsstore() {
 }
 
 # Function to recursively remove .localized files
-rmlocalized() {
+function rmlocalized() {
     local target_dir="${@:-.}"
     find "$target_dir" -type f -name .localized -delete
+}
+
+# Tmux sessionizer function
+# If tmux session with the working directory name exists then attach to it
+# Else create a new session with the pwd name
+function tmux-sessionizer {
+  name=$(basename `pwd` | sed -e 's/\.//g')
+  if tmux ls 2>&1 | grep "$name"; then
+    tmux attach -t "$name"
+  else
+    tmux new-session -s "$name"
+  fi
 }
 
 # Add starship prompt initialization at the end
