@@ -1,5 +1,7 @@
 # Changelog
 
+* Added `tmux` config
+* Seggregated environment variables in `.zshenv` file that is loaded before `.zshrc`
 * Initialized `zoxide` and `zsh-autocomplete`
 * Changed the location of `SHELL_SESSION_DIR` in `/etc/zshrc_Apple_Terminal`
 * Added `zsh-syntax-highlighting` in `.zshrc`
@@ -19,7 +21,7 @@
 - [x] Add a terminal prompt
 - [x] Add zsh sytax highlighting
 - [x] Add additional zsh features [zoxide and zsh-autocomplete]
-- [ ] Install and configure tmux
+- [x] Install and configure tmux
 - [ ] Install neovim
 - [ ] Set up neovim config
 - [ ] Add a neovim package manager and plugins

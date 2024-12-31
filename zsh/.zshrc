@@ -2,9 +2,6 @@
 # Remove any calls to compinit and keep before any calls to compdef 
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# Change history file location
-HISTFILE=$HOME/.cache/zsh/.zsh_history
-
 # Useful keymaps
 alias ls="ls -Alhp --color=auto"
 
@@ -28,7 +25,6 @@ rmlocalized() {
 }
 
 # Add starship prompt initialization at the end
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 eval "$(starship init zsh)"
 
 # Source zsh syntax highlighting
