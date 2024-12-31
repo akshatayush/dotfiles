@@ -1,5 +1,7 @@
 # Changelog
 
+* Initialized `zoxide` and `zsh-autocomplete`
+* Changed the location of `SHELL_SESSION_DIR` in `/etc/zshrc_Apple_Terminal`
 * Added `zsh-syntax-highlighting` in `.zshrc`
 * Set `STARSHIP_CONFIG` in `.zshrc`
 * Added `starship` config
@@ -16,7 +18,7 @@
 - [x] Configure terminal settings
 - [x] Add a terminal prompt
 - [x] Add zsh sytax highlighting
-- [ ] Add additional zsh features
+- [x] Add additional zsh features [zoxide and zsh-autocomplete]
 - [ ] Install and configure tmux
 - [ ] Install neovim
 - [ ] Set up neovim config
