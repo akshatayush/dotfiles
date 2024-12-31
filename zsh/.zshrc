@@ -1,3 +1,6 @@
+# Change history file location
+HISTFILE=$HOME/.cache/zsh/.zsh_history
+
 # Useful keymaps
 alias ls="ls -Alhp --color=auto"
 
