@@ -1,3 +1,7 @@
+# Keep autocompletions near the top
+# Remove any calls to compinit and keep before any calls to compdef 
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # Change history file location
 HISTFILE=$HOME/.cache/zsh/.zsh_history
 
