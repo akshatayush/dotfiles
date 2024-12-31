@@ -29,3 +29,8 @@ eval "$(starship init zsh)"
 
 # Source zsh syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Should be at the end
+# Note: For completions to work, the below line should be added after compinit is called
+# --cmd cd changes the cd command
+eval "$(zoxide init zsh --cmd cd)"
