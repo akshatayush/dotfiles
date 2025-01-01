@@ -1,3 +1,6 @@
+# History file location
+HISTFILE=$XDG_CACHE_HOME/zsh/.zsh_history
+
 # Keep autocompletions near the top
 # Remove any calls to compinit and keep before any calls to compdef 
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh

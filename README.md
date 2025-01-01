@@ -1,5 +1,7 @@
 # Changelog
 
+* Add simple neovim config
+* Small bug fixes (HISTFILE, Tmux copy mode)
 * Added a handy `tmux-sessionizer` function
 * Added `tmux` config
 * Seggregated environment variables in `.zshenv` file that is loaded before `.zshrc`
@@ -23,7 +25,8 @@
 - [x] Add zsh sytax highlighting
 - [x] Add additional zsh features [zoxide and zsh-autocomplete]
 - [x] Install and configure tmux
-- [ ] Install neovim
-- [ ] Set up neovim config
+- [x] Install neovim
+- [x] Set up neovim config
+- [ ] Refactor existing configs 
 - [ ] Add a neovim package manager and plugins
 - [ ] Configure neovim LSP
