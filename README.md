@@ -1,7 +1,9 @@
 # Changelog
 
-* Add simple neovim config
-* Small bug fixes (HISTFILE, Tmux copy mode)
+* Refactor `.zshrc` into separate files
+* Added `lazy.nvim` plugin manager and set up config structure
+* Added simple `neovim` config
+* Small bug fixes (`HISTFILE`, `tmux` copy mode)
 * Added a handy `tmux-sessionizer` function
 * Added `tmux` config
 * Seggregated environment variables in `.zshenv` file that is loaded before `.zshrc`
@@ -27,6 +29,6 @@
 - [x] Install and configure tmux
 - [x] Install neovim
 - [x] Set up neovim config
-- [ ] Refactor existing configs 
+- [x] Refactor existing configs 
 - [ ] Add a neovim package manager and plugins
 - [ ] Configure neovim LSP
