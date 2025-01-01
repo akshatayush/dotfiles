@@ -1,21 +1,12 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+-- Import options
+require("config.options")
 
-vim.g.have_nerd_font = true
+-- Import keymaps
+require("config.keymaps")
 
-vim.opt.number = true
-vim.opt.relativenumber = true
+-- Import autocommands
+require("config.autocmds")
 
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+-- Load lazy
+require("config.lazy")
 
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-
-vim.opt.scrolloff = 999
-
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
