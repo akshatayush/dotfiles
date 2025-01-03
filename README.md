@@ -1,5 +1,6 @@
 # Changelog
 
+* Added Treesitter for syntax parsing and Telescope for fuzzy file search
 * Refactor `.zshrc` into separate files
 * Added `lazy.nvim` plugin manager and set up config structure
 * Added simple `neovim` config
@@ -30,5 +31,5 @@
 - [x] Install neovim
 - [x] Set up neovim config
 - [x] Refactor existing configs 
-- [ ] Add a neovim package manager and plugins
+- [x] Add a neovim package manager and plugins
 - [ ] Configure neovim LSP

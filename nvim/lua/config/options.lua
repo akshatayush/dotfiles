@@ -19,6 +19,9 @@ vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
+-- Block cursor in all modes
+vim.opt.guicursor = "n-v-i-c:block"
+
 -- Keeps cursor vertically centered
 vim.opt.scrolloff = 999
 
