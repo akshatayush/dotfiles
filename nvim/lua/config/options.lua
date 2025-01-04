@@ -14,7 +14,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.breakindent = true
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:1"
 vim.opt.cursorline = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
