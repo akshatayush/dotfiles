@@ -8,8 +8,8 @@ vim.g.have_nerd_font = true
 -- Editor related options
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.wrap = false
@@ -36,3 +36,8 @@ vim.opt.smartcase = true
 -- Decrease update timing
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
+
+-- Setting default values of these so that
+-- command line is enabled if lualine is disabled
+vim.opt.showmode = true
+vim.opt.cmdheight = 1
