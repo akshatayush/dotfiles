@@ -23,10 +23,11 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.guicursor = "n-v-i-c:block"
 
 -- Keeps cursor vertically centered
-vim.opt.scrolloff = 999
+vim.opt.scrolloff = 10
 
 -- Use global OS clipboard
-vim.opt.clipboard = "unnamedplus"
+-- Improved (see keymaps.lua)
+-- vim.opt.clipboard = "unnamedplus"
 
 -- Ignore case when searching 
 -- Except if one or more capital letters is present
