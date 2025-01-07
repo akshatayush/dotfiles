@@ -1,8 +1,29 @@
 -- Press Esc to remove search highlights
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- Open quickfix
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic Quickfix list" })
+-- Open explore menu
+vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "Open explorer" })
+
+-- Toggle quickfix
+vim.keymap.set("n", "<leader>q", function()
+  local quickfix_open = false
+  for _, win in ipairs(vim.fn.getwininfo()) do
+    if win.quickfix == 1 then
+      quickfix_open = true
+      break
+    end
+  end
+  if quickfix_open then
+    vim.cmd("cclose")
+  else
+    vim.diagnostic.setqflist()
+    vim.cmd("copen")
+  end
+end, { desc = "Open quickfix list" })
+
+-- Quickfix list movement
+vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Jump to next quickfix item" })
+vim.keymap.set("n", "[q", ":cprev<CR>", { desc = "Jump to previous quickfix item" })
 
 -- Simpler window focus shift
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
