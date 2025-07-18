@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+echo "Creating symlinks..."
+
+stow_folders=(
+  ghostty
+  nvim
+  starship
+  tmux
+  zsh
+)
+
+for folder in "${stow_folders[@]}"; do
+  ln -siv "$(pwd)/$folder" "$XDG_CONFIG_HOME"
+done

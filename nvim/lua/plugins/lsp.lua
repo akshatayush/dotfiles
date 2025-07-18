@@ -131,8 +131,9 @@ return {
           require("lspconfig")[server_name].setup(server)
         end,
       },
-      ensure_installed = {},
+      ensure_installed = ensure_installed,
       automatic_installation = false,
+      automatic_enable = true,
     }
   end,
 }
