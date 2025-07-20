@@ -13,9 +13,9 @@ EOF
 }
 
 if [[ $# -eq 0 ]]; then
-    printf "Error: At least one directory or file must be specified.\n\n"
-    show_usage
-    exit 1
+  printf "Error: At least one directory or file must be specified.\n\n"
+  show_usage
+  exit 1
 fi
 
 TARGET_DIR="$HOME/.config"
@@ -24,42 +24,42 @@ SOURCE_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 POSITIONAL_ARGS=()
 
 while [[ $# -gt 0 ]]; do
-    case $1 in
-        -h | --help)
-            show_usage
-            exit 0
-            ;;
-        -c | --config-dir)
-            opt="$1"
-            shift
-            if [[ $# -eq 0 ]]; then
-                printf "Error: %s option requires a <path>\n\n" "$opt"
-                show_usage
-                exit 1
-            fi
-            TARGET_DIR="$1"
-            shift
-            ;;
-        -* | --*)
-            printf "Error: Invalid option %s\n\n" "$1"
-            show_usage
-            exit 1
-            ;;
-        *)
-            POSITIONAL_ARGS+=("$1")
-            shift
-            ;;
-    esac
+  case $1 in
+    -h | --help)
+      show_usage
+      exit 0
+      ;;
+    -c | --config-dir)
+      opt="$1"
+      shift
+      if [[ $# -eq 0 ]]; then
+        printf "Error: %s option requires a <path>\n\n" "$opt"
+        show_usage
+        exit 1
+      fi
+      TARGET_DIR="$1"
+      shift
+      ;;
+    -* | --*)
+      printf "Error: Invalid option %s\n\n" "$1"
+      show_usage
+      exit 1
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
 done
 
 set -- "${POSITIONAL_ARGS[@]}"
 
 if [[ $# -eq 0 ]]; then
-    printf "Error: At least one directory or file must be specified.\n\n"
-    show_usage
-    exit 1
+  printf "Error: At least one directory or file must be specified.\n\n"
+  show_usage
+  exit 1
 fi
 
 for file in "$@"; do
-    ln -siv "$SOURCE_DIR/$file" "$TARGET_DIR"
+  ln -siv "$SOURCE_DIR/$file" "$TARGET_DIR"
 done
