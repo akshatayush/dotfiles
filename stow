@@ -1,15 +1,65 @@
 #!/usr/bin/env bash
 
-echo "Creating symlinks..."
+show_usage() {
+cat <<- "EOF"
+Usage:  ./stow [--config-dir|-c <path>] <directory|file> ...
 
-stow_folders=(
-  ghostty
-  nvim
-  starship
-  tmux
-  zsh
-)
+Options:
+    -c, --config-dir <path>     Target directory where symlinks will be created.
+                                Default location is $HOME/.config
+                                [IMPORTANT]: <path> should not end in a /
+    -h, --help                  Display this help message
+EOF
+}
 
-for folder in "${stow_folders[@]}"; do
-  ln -siv "$(pwd)/$folder" "$XDG_CONFIG_HOME"
+if [[ $# -eq 0 ]]; then
+    printf "Error: At least one directory or file must be specified.\n\n"
+    show_usage
+    exit 1
+fi
+
+TARGET_DIR="$HOME/.config"
+SOURCE_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+
+POSITIONAL_ARGS=()
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -h | --help)
+            show_usage
+            exit 0
+            ;;
+        -c | --config-dir)
+            opt="$1"
+            shift
+            if [[ $# -eq 0 ]]; then
+                printf "Error: %s option requires a <path>\n\n" "$opt"
+                show_usage
+                exit 1
+            fi
+            TARGET_DIR="$1"
+            shift
+            ;;
+        -* | --*)
+            printf "Error: Invalid option %s\n\n" "$1"
+            show_usage
+            exit 1
+            ;;
+        *)
+            POSITIONAL_ARGS+=("$1")
+            shift
+            ;;
+    esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+
+if [[ $# -eq 0 ]]; then
+    printf "Error: At least one directory or file must be specified.\n\n"
+    show_usage
+    exit 1
+fi
+
+for file in "$@"; do
+    ln -siv "$SOURCE_DIR/$file" "$TARGET_DIR"
 done
