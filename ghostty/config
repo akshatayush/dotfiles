@@ -1,3 +1,6 @@
+# Start interactive shell
+command = /opt/homebrew/bin/fish
+
 # Title bar style
 title = " "
 macos-titlebar-style = tabs
@@ -16,10 +19,6 @@ theme = dark:rose-pine,light:rose-pine-dawn
 
 # Otherwise selection text wasn't visible
 selection-background = 8C9AC3
-
-# Quick terminal
-keybind = global:cmd+.=toggle_quick_terminal
-quick-terminal-animation-duration = 0
 
 # Auto update
 auto-update = check
