@@ -10,4 +10,6 @@ if status is-interactive
 
     set --global --export STARSHIP_CONFIG "$HOME/.config/starship/starship.toml"
     starship init fish | source
+
+    zoxide init fish --cmd cd | source
 end
