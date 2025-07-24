@@ -45,7 +45,7 @@ return {
     }
     -- This will override the default values:
     -- showmode = true, cmdheight = 1 (set when lualine disabled)
-    vim.opt.showmode = false
-    vim.opt.cmdheight = 0
+    -- vim.opt.showmode = false
+    -- vim.opt.cmdheight = 0
   end,
 }

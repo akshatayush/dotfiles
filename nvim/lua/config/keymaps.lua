@@ -2,7 +2,7 @@
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Open explore menu
-vim.keymap.set("n", "<leader>e", ":Ex<CR>", { desc = "Open explorer" })
+vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent directory in Oil" })
 
 -- Toggle quickfix
 vim.keymap.set("n", "<leader>q", function()

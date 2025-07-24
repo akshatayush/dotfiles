@@ -8,7 +8,7 @@ return {
   },
 
   config = function()
-    require('telescope').setup{
+    require('telescope').setup {
       pickers = {
         find_files = { theme = "ivy" },
         live_grep = { theme = "ivy" },
@@ -17,10 +17,10 @@ return {
       },
       extensions = {
         fzf = {
-          fuzzy = true,                    -- false will only do exact matching
-          override_generic_sorter = true,  -- override the generic sorter
-          override_file_sorter = true,     -- override the file sorter
-          case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+          fuzzy = true,                   -- false will only do exact matching
+          override_generic_sorter = true, -- override the generic sorter
+          override_file_sorter = true,    -- override the file sorter
+          case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
         },
       },
     }
@@ -28,13 +28,21 @@ return {
     require('telescope').load_extension('fzf')
 
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope: Find files' })
+    vim.keymap.set('n', '<leader>ff', function()
+      builtin.find_files {
+        follow = true,
+        hidden = true,
+        no_ignore = true,
+      }
+    end, { desc = 'Telescope: Find files' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope: Live grep' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope: Find buffers' })
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope: Help tags' })
     vim.keymap.set('n', '<leader>fc', function()
       builtin.find_files {
-        cwd = os.getenv("XDG_CONFIG_HOME"),
+        cwd = os.getenv("HOME") .. "/.config",
+        follow = true,
+        hidden = true,
       }
     end, { desc = 'Telescope: Find config files' })
 
