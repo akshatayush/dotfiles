@@ -1,27 +1,31 @@
-# Changelog
+## Changelog
 
-* Added `nvim-cmp` for autocompletions
-* Added `nvim-lspconfig` for LSP communication
-* Added `gitsigns` for git gutter
-* Added `which-key` to reference keybinds
-* Added `lualine` for status line
-* Added `treesitter` for syntax parsing and `telescope` for fuzzy file search
-* Refactor `.zshrc` into separate files
-* Added `lazy.nvim` plugin manager and set up config structure
-* Added simple `neovim` config
-* Small bug fixes (`HISTFILE`, `tmux` copy mode)
-* Added a handy `tmux-sessionizer` function
-* Added `tmux` config
-* Seggregated environment variables in `.zshenv` file that is loaded before `.zshrc`
-* Initialized `zoxide` and `zsh-autocomplete`
-* Changed the location of `SHELL_SESSION_DIR` in `/etc/zshrc_Apple_Terminal`
-* Added `zsh-syntax-highlighting` in `.zshrc`
-* Set `STARSHIP_CONFIG` in `.zshrc`
-* Added `starship` config
-* Added `ghostty` config
-* Initialized `homebrew` in `.zprofile`
-* Added `.zshrc` with a basic config
-* Set `ZDOTLIB` environment variable in `/etc/zshenv`
+* v2.0 (current)
+    - Added `oil.nvim` and `render-markdown` to neovim
+    - Switched to `zellij` for terminal multiplexing
+    - Switched to `fish` shell and added config
+
+* v1.0
+    - Added `luasnip` for snippets and added various completion sources
+    - Added `nvim-cmp` for autocompletions
+    - Added `nvim-lspconfig` for LSP communication
+    - Added `gitsigns` for git gutter
+    - Added `which-key` to reference keybinds
+    - Added `lualine` for status line
+    - Added `treesitter` for syntax parsing and `telescope` for fuzzy file search
+    - Added `lazy.nvim` plugin manager and set up config structure
+    - Added simple `neovim` config
+    - Small bug fixes (`HISTFILE`, `tmux` copy mode)
+    - Added a handy `tmux-sessionizer` function
+    - Added `tmux` config
+    - Initialized `zoxide` and `zsh-autocomplete`
+    - Changed the location of `SHELL_SESSION_DIR` in `/etc/zshrc_Apple_Terminal`
+    - Added `zsh-syntax-highlighting`
+    - Added `starship` config
+    - Added `ghostty` config
+    - Initialized `homebrew` in `.zprofile`
+    - Added `.zshrc` with a basic config
+    - Set `ZDOTLIB` environment variable in `/etc/zshenv`
 
 ## Installed neovim plugins
 
@@ -49,19 +53,5 @@
     - [cmp-path](https://github.com/hrsh7th/cmp-path) - Completion source for file paths
     - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - Completion source for command line
     - [cmp-nvim-lsp-signature-help](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help) - Function signature help
-
-## TODO
-
-- [x] Set configuration folder using environment variables
-- [x] Install `homebrew`
-- [x] Set up basic `.zshrc` config
-- [x] Configure terminal settings
-- [x] Add a terminal prompt
-- [x] Add zsh sytax highlighting
-- [x] Add additional zsh features [zoxide and zsh-autocomplete]
-- [x] Install and configure tmux
-- [x] Install neovim
-- [x] Set up neovim config
-- [x] Refactor existing configs 
-- [x] Add a neovim package manager and plugins
-- [x] Configure neovim LSP
+10. [oil](https://github.com/stevearc/oil.nvim) - Edit the filesystem like a buffer
+11. [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim) - Render markdown files in buffer
