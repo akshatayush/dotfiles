@@ -1,3 +1,21 @@
+## Usage
+
+```bash
+# Clone the repository and cd into it
+git clone git@github.com:akshatayush/dotfiles.git
+cd dotfiles
+
+# Make stow executable
+sudo chmod u+x stow
+
+# Use stow to symlink folders to your config directory
+# Default config directory is $HOME/.config
+./stow <directory|file> ...
+
+# Get more options for stow
+./stow --help
+```
+
 ## Changelog
 
 * v2.0 (current)
