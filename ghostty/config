@@ -5,6 +5,9 @@ command = /opt/homebrew/bin/fish
 title = " "
 macos-titlebar-style = tabs
 
+# User left option key as meta
+macos-option-as-alt = left
+
 # Initial window size
 window-height = 34
 window-width = 100
